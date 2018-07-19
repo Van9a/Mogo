@@ -32,7 +32,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     color: #fce38a;
-    border-bottom: 2px solid #fce38a;
+    /*border-bottom: 2px solid #fce38a;*/
     transform: scaleX(1);
 }
 

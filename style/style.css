@@ -466,10 +466,6 @@ ul {
     height: 3px;
 }
 
-.we-do .we-do--image {
-    width: 50%;
-}
-
 .we-do .card-body {
     max-height: 180px;
     overflow-y: auto;
@@ -1034,61 +1030,175 @@ footer .created-by .author {
     color: #f49f9f;
 }
 
-@media screen and (max-width: 768px) {
-    .intro .title-text h1 {
-        font-size: 75px;
-    }
-    .intro {
-        height: 70vw;
-    }
-    .blog {
-        height: 200vw;
+@media screen and (max-width: 2560px) {
+    .intro, .services, .story {
+        height: 35vw;
     }
 
-    .blog img {
-        height: 100%;
+    .counter-info {
+        height: 12vw;
     }
 
-    .blog .blog-items {
-        flex-direction: column;
+    .unique-design .tablet {
+        height: 920px;
     }
 
-    .blog .blog-item {
-        min-width: 100% !important;
-        margin-bottom: 50px;
+    .unique-design .phone-img {
+        width: 15%;
     }
 
-    .blog .blog-item--photo {
-        display: flex;
-        height: 100%;
-        width: 100%;
-    }
-    .we-do {
-        height: 85vh;
-    }
     .we-do .we-do--image {
+        width: 48%;
+    }
+
+    .we-do--image img {
         width: 100%;
     }
 
-    .we-do .row {
-        flex-direction: column;
+    #accordion {
+        width: 50%;
+        margin-left: 20px;
+    }
+
+    .we-do {
+        height: 31vw;
+    }
+
+    .slider-quote {
+        height: 10vw;
+    }
+
+    .slider-quote .container {
+        height: 6vw;
+    }
+
+    .slider-quote .carousel {
+        height: 6vw;
+    }
+
+    .work-photo img {
+        width: 100%;
+    }
+
+    .slider-quote-second {
+        height: 12vw;
+    }
+
+    .slider-quote-second #customId {
+        height: 9vw;
+    }
+
+    .people-say {
+        height: 40vw;
+        background-size: cover;
+    }
+
+    .blog {
+        height: 30vw;
+    }
+
+    footer {
+        height: 30vw;
     }
 
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (max-width: 1440px) {
+    .intro {
+        height: 55vw;
+    }
+
+    .intro, .services, .story {
+        height: 50vw;
+    }
+
+    .counter-info {
+        height: 20vw;
+    }
+
+    .unique-design .tablet {
+        width: 32%;
+        height: 568px;
+    }
+
+    .we-do {
+        height: 54vw;
+    }
+
+    .we-do .we-do--image {
+        width: 48%;
+    }
+
+    .we-do--image img {
+        width: 100%;
+    }
+
+    #accordion {
+        width: 50%;
+        margin-left: 20px;
+    }
+
+    .slider-quote {
+        height: 15vw;
+    }
+
+    .slider-quote .carousel {
+        height: 10vw;
+    }
+
+    .slider-quote .container {
+        height: 13vw;
+    }
+
+    .slider-quote-second {
+        height: 20vw;
+    }
+
+    .slider-quote-second .carousel-inner {
+        height: 15vw;
+    }
+
+    .slider-quote-second #customId {
+        height: 14vw;
+    }
+
+    .blog {
+        height: 50vw;
+    }
+
+    footer {
+        height: 42vw;
+    }
+}
+
+@media screen and  (max-width: 1024px) {
     .intro .title-text h1 {
         font-size: 100px;
     }
+
     .story {
         height: 65vw;
     }
+
+    .counter-info {
+        height: 27vw;
+    }
+
     .services {
         height: 65vw;
     }
+
     .services h5,
     footer h5 {
         font-size: 1rem;
+    }
+
+    .services {
+        height: 77vw;
+    }
+
+    .services .media svg {
+        width: 10%;
     }
 
     .unique-design .tablet {
@@ -1135,7 +1245,7 @@ footer .created-by .author {
     }
 
     footer {
-        height: 55vw;
+        height: 65vw;
     }
 
     .intro {
@@ -1143,7 +1253,7 @@ footer .created-by .author {
     }
 
     .counter-info {
-        height: 25vh;
+        height: 25vw;
     }
 
     .services svg {
@@ -1162,6 +1272,7 @@ footer .created-by .author {
     .we-do {
         height: 75vw;
     }
+
     .blog {
         height: 70vw;
     }
@@ -1181,4 +1292,67 @@ footer .created-by .author {
         background-size: cover;
     }
 
+}
+
+@media (max-width: 980px) {
+
+    .intro .title-text h1 {
+        font-size: 75px;
+    }
+
+    .intro {
+        height: 60vw;
+    }
+
+    .people-say {
+        height: 120vw;
+    }
+
+    .blog {
+        height: 200vw;
+        justify-content: space-around;
+    }
+
+    .blog .title-text {
+        margin-top: auto;
+    }
+
+    .blog img {
+        height: 100%;
+    }
+
+    .blog .blog-items {
+        flex-direction: column;
+    }
+
+    .blog .blog-item {
+        min-width: 100% !important;
+        margin-bottom: 50px;
+    }
+
+    .blog .blog-item--photo {
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    .we-do {
+        height: 80vw;
+    }
+
+    footer {
+        height: 140vw;
+    }
+
+    footer .last-notes, footer .blog-instagram {
+        padding-top: 50px;
+    }
+}
+@media (max-width: 425px) {
+    .intro {
+        height: 66vw;
+    }
+   .intro .title-text span {
+        font-size: 60px;
+    }
 }

@@ -1339,6 +1339,22 @@ footer .created-by .author {
         height: 120vw;
     }
 
+    .services {
+        height: 90vw;
+    }
+
+    .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
+        height: 24vw;
+    }
+
+    #carouselExampleControls {
+        height: 15vw;
+    }
+
+    .we-do {
+        height: 85vw;
+    }
+
     .blog {
         height: 200vw;
         justify-content: space-around;
@@ -1367,12 +1383,25 @@ footer .created-by .author {
         width: 100%;
     }
 
-    .we-do {
-        height: 80vw;
+    .blog {
+        height: 150vw;
+    }
+
+    .blog img {
+        height: 100%;
+        width: 50%;
+    }
+
+    .blog .blog-item {
+        min-width: 100% !important;
+        margin-bottom: 50px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
     }
 
     footer {
-        height: 140vw;
+        height: 160vw;
     }
 
     footer .last-notes, footer .blog-instagram {
@@ -1469,7 +1498,17 @@ footer .created-by .author {
     }
 
     .we-do {
-        height: 130vw;
+        height: 200vw;
+    }
+
+    .we-do .we-do--image {
+        width: 100%;
+    }
+
+    #accordion {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
     }
 
     .story .photo-container {
@@ -1491,9 +1530,7 @@ footer .created-by .author {
     }
 
     .slider-quote-second {
-
         height: 65vw;
-
     }
 
     #carouselExampleControls {
@@ -1501,13 +1538,16 @@ footer .created-by .author {
     }
 
     .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-
         height: 50vw;
-
     }
 
-    .slider-quote-second {
-        height: 53vw;
+    .slider-quote .carousel-inner {
+        margin-left: 25px;
+    }
+
+    .slider-quote .carousel-inner {
+
+        width: 95%;
     }
 
     .slider-quote-second #customId {
@@ -1533,8 +1573,7 @@ footer .created-by .author {
     }
 
     footer {
-        height: 300vw;
-
+        height: 270vw;
     }
 }
 
@@ -1545,5 +1584,49 @@ footer .created-by .author {
 
     .intro .title-text span {
         font-size: 60px;
+    }
+
+    .story {
+        height: 300vw;
+    }
+
+    .intro .title-text span {
+        font-size: 30px;
+    }
+
+    .intro .title-text h1 {
+        font-size: 40px;
+    }
+
+    .intro .slider-text {
+        font-size: 15px;
+    }
+
+    .unique-design {
+        height: 481px;
+    }
+
+    .unique-design .tablet {
+        height: 193px;
+        width: 36%;
+    }
+
+    .services {
+        height: 260vw;
+    }
+
+    .services .media {
+        margin: 35px 0;
+    }
+
+    .counter-info .number {
+        font-size: 27px;
+    }
+
+    .counter-info .counter-text {
+        font-size: 11px;
+    }
+    .we-do {
+        height: 270vw;
     }
 }

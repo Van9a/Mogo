@@ -13,7 +13,6 @@ body {
     background-size: cover;
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -144,7 +143,7 @@ ul {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    margin-top: 70px;
+    margin-bottom: 50px;
 }
 
 .slider-items {
@@ -506,16 +505,12 @@ ul {
     background: #f8f8f8;
 }
 
-.slider-quote .container {
-    height: 10vw;
-}
-
 .slider-quote .carousel,
 .slider-quote .media,
 .slider-quote .carousel-inner,
 .slider-quote .carousel-item,
 .slider-quote .media-body {
-    height: 12vw;
+    height: 12vh;
 }
 
 .slider-quote .media svg {
@@ -767,19 +762,17 @@ ul {
 }
 
 .blog {
-    height: 100vh;
+    height: 85vh;
     position: relative;
     display: flex;
     z-index: 2;
-    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     overflow: hidden;
 }
 
 .blog .title-text {
-    margin-top: 112px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .blog .title-text span {
@@ -1031,8 +1024,8 @@ footer .created-by .author {
 }
 
 @media screen and (max-width: 2560px) {
-    .intro, .services, .story {
-        height: 35vw;
+    .services, .story {
+        height: 70vh;
     }
 
     .counter-info {
@@ -1040,7 +1033,7 @@ footer .created-by .author {
     }
 
     .unique-design .tablet {
-        height: 920px;
+        height: 72%;
     }
 
     .unique-design .phone-img {
@@ -1061,19 +1054,11 @@ footer .created-by .author {
     }
 
     .we-do {
-        height: 31vw;
+        height: 80vh;
     }
 
     .slider-quote {
-        height: 10vw;
-    }
-
-    .slider-quote .container {
-        height: 6vw;
-    }
-
-    .slider-quote .carousel {
-        height: 6vw;
+        height: 16vh;
     }
 
     .work-photo img {
@@ -1089,12 +1074,12 @@ footer .created-by .author {
     }
 
     .people-say {
-        height: 40vw;
+        height: 65vh;
         background-size: cover;
     }
 
     .blog {
-        height: 30vw;
+        height: 43vh;
     }
 
     footer {
@@ -1103,13 +1088,52 @@ footer .created-by .author {
 
 }
 
+@media screen and (max-width: 1920px) {
+    .slider-quote {
+        height: 20vh;
+    }
+
+    .slider-quote .carousel,
+    .slider-quote .media,
+    .slider-quote .carousel-inner,
+    .slider-quote .carousel-item,
+    .slider-quote .media-body {
+        height: 11vw;
+    }
+
+    .counter-info {
+        height: 23vh;
+    }
+
+    .we-do {
+        height: 65vh;
+    }
+
+    .blog {
+        height: 70vh;
+    }
+
+    .slider-quote-second {
+        height: 23vh;
+    }
+
+    footer {
+        height: 65vh;
+    }
+}
+
 @media screen and (max-width: 1440px) {
     .intro {
         height: 55vw;
     }
 
-    .intro, .services, .story {
+    .services, .story {
         height: 50vw;
+    }
+
+    .intro .title-text h1 {
+        padding-top: 20px;
+        font-size: 120px;
     }
 
     .counter-info {
@@ -1118,7 +1142,6 @@ footer .created-by .author {
 
     .unique-design .tablet {
         width: 32%;
-        height: 568px;
     }
 
     .we-do {
@@ -1174,6 +1197,10 @@ footer .created-by .author {
 @media screen and  (max-width: 1024px) {
     .intro .title-text h1 {
         font-size: 100px;
+    }
+
+    .intro {
+        height: 70vw;
     }
 
     .story {
@@ -1244,12 +1271,12 @@ footer .created-by .author {
         margin-left: 20px;
     }
 
-    footer {
-        height: 65vw;
+    .map {
+        height: 30vw;
     }
 
-    .intro {
-        height: 63vw;
+    footer {
+        height: 65vw;
     }
 
     .counter-info {
@@ -1294,7 +1321,7 @@ footer .created-by .author {
 
 }
 
-@media (max-width: 980px) {
+@media screen and  (max-width: 980px) {
 
     .intro .title-text h1 {
         font-size: 75px;
@@ -1302,6 +1329,10 @@ footer .created-by .author {
 
     .intro {
         height: 60vw;
+    }
+
+    .counter-info .number {
+        font-size: 65px;
     }
 
     .people-say {
@@ -1348,11 +1379,171 @@ footer .created-by .author {
         padding-top: 50px;
     }
 }
-@media (max-width: 425px) {
+
+@media screen and  (max-width: 768px) {
+    .title-text span {
+        font-size: 64px;
+    }
+
+    .story {
+        height: 85vw;
+    }
+
+    .services {
+        height: 105vw;
+    }
+
+    .unique-design .tablet {
+        height: 304px;
+    }
+
+    .unique-design .phone-img {
+        bottom: -64px;
+    }
+
+    .we-do {
+        height: 100vw;
+    }
+
+    .slider-quote {
+        height: 30vw;
+    }
+
+    .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
+        height: 30vw;
+    }
+
+    .slider-quote-second {
+        height: 40vw;
+    }
+
+    .people-say {
+        height: 150vw;
+    }
+
+    .blog {
+        height: 190vw;
+    }
+
+    .blog img {
+        height: 100%;
+        width: 50%;
+    }
+
+    .blog .blog-item {
+        min-width: 100% !important;
+        margin-bottom: 50px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    footer {
+        height: 185vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .intro {
+        height: 130vw;
+    }
+
+    .slider-controller {
+        flex-direction: column;
+    }
+
+    .story {
+        height: 200vw;
+    }
+
+    .counter-info .number {
+        font-size: 50px;
+    }
+
+    .counter-info {
+        height: 32vw;
+    }
+
+    .services {
+        height: 205vw;
+    }
+
+    .we-do {
+        height: 130vw;
+    }
+
+    .story .photo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unique-design .tablet {
+        height: 308px;
+    }
+
+    .unique-design .tablet {
+        width: 40%;
+    }
+
+    .slider-quote {
+        height: 45vw;
+    }
+
+    .slider-quote-second {
+
+        height: 65vw;
+
+    }
+
+    #carouselExampleControls {
+        height: 30vw;
+    }
+
+    .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
+
+        height: 50vw;
+
+    }
+
+    .slider-quote-second {
+        height: 53vw;
+    }
+
+    .slider-quote-second #customId {
+
+        height: 43vw;
+    }
+
+    .people-say {
+        height: 190vw;
+    }
+
+    .blog {
+        height: 280vw;
+    }
+
+    .blog img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .blog .blog-item {
+        height: auto;
+    }
+
+    footer {
+        height: 300vw;
+
+    }
+}
+
+@media screen and  (max-width: 425px) {
     .intro {
         height: 66vw;
     }
-   .intro .title-text span {
+
+    .intro .title-text span {
         font-size: 60px;
     }
 }

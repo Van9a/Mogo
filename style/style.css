@@ -1576,7 +1576,7 @@ footer .created-by .author {
     }
 }
 
-@media screen and  (max-width: 425px) {
+@media screen and  (max-width: 475px) {
     .intro {
         height: 66vw;
     }
@@ -1602,7 +1602,8 @@ footer .created-by .author {
     }
 
     .unique-design {
-        height: 481px;
+        height: 366px;
+        min-height: 200px;
     }
 
     .unique-design .tablet {
@@ -1628,6 +1629,25 @@ footer .created-by .author {
 
     .we-do {
         height: 270vw;
+    }
+
+    .slider-quote {
+        height: 60vw;
+    }
+
+    .slider-quote .media svg {
+        padding: 23px;
+        width: 118px;
+        height: 115px;
+    }
+    .people-say {
+        height: 260vw;
+    }
+    .blog {
+        height: 330vw;
+    }
+   .blog .blog-title .col-xs-4{
+        max-width: 16%;
     }
 }
 

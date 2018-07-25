@@ -10,13 +10,13 @@
         );
         document.head.appendChild(msViewportStyle)
     }
-    $(document).ready(function () {
+   /* $(document).ready(function () {
         //Set the carousel options
         $('#quote-carousel').carousel({
             pause: true,
             interval: 8000
         });
-    });
+    });*/
     $(document).ready(function () {
         $('.icon').click(function () {
             $('.icon').toggleClass('active');

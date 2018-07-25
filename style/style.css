@@ -869,6 +869,26 @@ ul {
     background-color: #fff;
 }
 
+footer .footer-logo {
+    width: 40%;
+}
+
+footer .notes a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+footer .notes .media img {
+    width: 160px;
+    height: 100%;
+}
+
+footer .notes a:hover {
+    text-decoration: none;
+    color: #fce38a;
+}
+
 footer {
     height: 80vh;
     position: relative;
@@ -1113,7 +1133,7 @@ footer .created-by .author {
     }
 
     .slider-quote-second {
-        height: 23vh;
+        height: 15vw;
     }
 
     footer {
@@ -1122,9 +1142,6 @@ footer .created-by .author {
 }
 
 @media screen and (max-width: 1440px) {
-    .intro {
-        height: 55vw;
-    }
 
     .services, .story {
         height: 50vw;
@@ -1189,17 +1206,35 @@ footer .created-by .author {
     }
 
     footer {
-        height: 42vw;
+        height: 45vw;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    footer {
+        height: 53vw;
+    }
+
+    .slider-quote-second .carousel-inner {
+        height: 17vw;
+    }
+
+    .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
+        height: 12vw;
+    }
+
+    .slider-quote {
+        height: 19vw;
+    }
+
+    .slider-quote-second {
+        height: 23vw;
     }
 }
 
 @media screen and  (max-width: 1024px) {
     .intro .title-text h1 {
         font-size: 100px;
-    }
-
-    .intro {
-        height: 70vw;
     }
 
     .story {
@@ -1326,8 +1361,12 @@ footer .created-by .author {
         font-size: 75px;
     }
 
-    .intro {
+    .unique-design {
         height: 60vw;
+    }
+
+    .unique-design .tablet {
+        height: 405px;
     }
 
     .counter-info .number {
@@ -1355,7 +1394,7 @@ footer .created-by .author {
     }
 
     .blog {
-        height: 200vw;
+        height: 135vw;
         justify-content: space-around;
     }
 
@@ -1380,10 +1419,6 @@ footer .created-by .author {
         display: flex;
         height: 100%;
         width: 100%;
-    }
-
-    .blog {
-        height: 150vw;
     }
 
     .blog img {
@@ -1472,186 +1507,42 @@ footer .created-by .author {
 }
 
 @media screen and (max-width: 600px) {
-    .intro {
-        height: 130vw;
-    }
-
-    .slider-controller {
-        flex-direction: column;
-    }
-
-    .story {
-        height: 200vw;
-    }
-
-    .counter-info .number {
-        font-size: 50px;
-    }
-
-    .counter-info {
-        height: 32vw;
-    }
-
-    .services {
-        height: 205vw;
-    }
-
-    .we-do {
-        height: 200vw;
-    }
-
-    .we-do .we-do--image {
-        width: 100%;
-    }
-
-    #accordion {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-    }
-
-    .story .photo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .unique-design .tablet {
-        height: 308px;
-    }
-
-    .unique-design .tablet {
-        width: 40%;
-    }
-
-    .slider-quote {
-        height: 45vw;
-    }
-
-    .slider-quote-second {
-        height: 65vw;
-    }
-
-    #carouselExampleControls {
-        height: 30vw;
-    }
-
-    .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-        height: 50vw;
-    }
-
-    .slider-quote .carousel-inner {
-        margin-left: 25px;
-    }
-
-    .slider-quote .carousel-inner {
-
-        width: 95%;
-    }
-
-    .slider-quote-second #customId {
-
-        height: 43vw;
-    }
-
-    .people-say {
-        height: 190vw;
-    }
-
-    .blog {
-        height: 280vw;
-    }
-
-    .blog img {
-        height: 100%;
-        width: 100%;
-    }
-
-    .blog .blog-item {
-        height: auto;
-    }
-
-    footer {
-        height: 270vw;
-    }
-}
-
-@media screen and  (max-width: 475px) {
-    .intro {
-        height: 66vw;
-    }
 
     .intro .title-text span {
-        font-size: 60px;
+        font-size: 35px !important;
     }
 
-    .story {
-        height: 300vw;
-    }
-
-    .intro .title-text span {
-        font-size: 30px;
+    .intro .learn-more {
+        margin-top: 0 !important;
     }
 
     .intro .title-text h1 {
         font-size: 40px;
     }
 
-    .intro .slider-text {
-        font-size: 15px;
+    .title-text span {
+        font-size: 18px !important;
     }
 
-    .unique-design {
-        height: 366px;
-        min-height: 200px;
+    .title-text h2 {
+        font-size: 23px !important;
     }
 
-    .unique-design .tablet {
-        height: 193px;
-        width: 36%;
+    .unique-design .title-text {
+        padding-top: 12vw;
     }
 
-    .services {
-        height: 260vw;
+    .unique-design .title-text h2 {
+        margin: 0;
     }
 
-    .services .media {
-        margin: 35px 0;
+    .we-do .title-text {
+
+        padding-top: 60px;
+
     }
 
-    .counter-info .number {
-        font-size: 27px;
-    }
-
-    .counter-info .counter-text {
-        font-size: 11px;
-    }
-
-    .we-do {
-        height: 270vw;
-    }
-
-    .slider-quote {
-        height: 60vw;
-    }
-
-    .slider-quote .media svg {
-        padding: 23px;
-        width: 118px;
-        height: 115px;
-    }
-    .people-say {
-        height: 260vw;
-    }
-    .blog {
-        height: 330vw;
-    }
-   .blog .blog-title .col-xs-4{
-        max-width: 16%;
-    }
-}
-
-@media screen and  (max-width: 350px) {
+    /*********************************************************************/
     .icon {
         position: absolute;
         top: 85%;
@@ -1709,8 +1600,7 @@ footer .created-by .author {
     .menu ul {
         height: 0;
         overflow: hidden;
-        background: #505050;
-
+        background: rgba(243, 129, 129, .9);
     }
 
     .menu ul.open {
@@ -1721,14 +1611,15 @@ footer .created-by .author {
         text-align: left;
         width: 100%;
     }
-/**/
+
     .menu ul li a {
         color: #fff;
     }
-    .menu ul.open
-    {
+
+    .menu ul.open {
         transition: all .9s ease;
     }
+
     .menu ul.open {
         height: 300px;
         width: 109%;
@@ -1740,23 +1631,58 @@ footer .created-by .author {
         z-index: 1;
     }
 
-
-    /***************************************************************/
-    .story {
-        height: 400vw;
+    .slider-controller {
+        flex-direction: column;
     }
 
-    .services {
-        height: 380vw;
+    .story {
+        height: 200vw;
+    }
+
+    .counter-info .number {
+        font-size: 50px;
     }
 
     .counter-info {
-        height: 90vw;
+        height: 32vw;
     }
 
-    .unique-design {
-        height: 325px;
-        min-height: 325px;
+    .services {
+        height: 205vw;
+    }
+
+    .we-do {
+        height: 200vw;
+    }
+
+    .we-do .we-do--image {
+        width: 100%;
+    }
+
+    #accordion {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .story .photo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unique-design .tablet {
+        height: 308px;
+    }
+
+    .unique-design .tablet {
+        height: 242px;
+    }
+
+    .counter-info {
+
+        height: 75vw;
+
     }
 
     .counter-info .container {
@@ -1777,18 +1703,157 @@ footer .created-by .author {
         justify-content: space-around;
     }
 
+    .slider-quote {
+        height: 45vw;
+    }
+
+    .slider-quote-second {
+        height: 65vw;
+    }
+
+    #carouselExampleControls {
+        height: 30vw;
+    }
+
+    .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
+        height: 50vw;
+    }
+
+    .slider-quote .carousel-inner {
+        margin-left: 25px;
+    }
+
+    .slider-quote .carousel-inner {
+
+        width: 95%;
+    }
+
+    .slider-quote-second #customId {
+
+        height: 43vw;
+    }
+
+    .people-say {
+        height: 190vw;
+    }
+
+    .blog {
+        height: 280vw;
+    }
+
+    .blog img {
+        height: 100%;
+        width: 100%;
+    }
+
+    .blog .blog-item {
+        height: auto;
+    }
+
+    footer {
+        height: 270vw;
+    }
+}
+
+@media screen and  (max-width: 475px) {
+
+    .story {
+        height: 300vw;
+    }
+
+    .intro .slider-text {
+        font-size: 15px;
+    }
+
+    .unique-design {
+        height: 366px;
+        min-height: 200px;
+    }
+
     .unique-design .tablet {
-        height: 145px;
+        height: 193px;
         width: 36%;
     }
 
-    .unique-design .phone-img {
-        width: 21%;
-        bottom: -27px;
+    .services {
+        height: 260vw;
+    }
+
+    .services .media {
+        margin: 35px 0;
+    }
+
+    .counter-info .number {
+        font-size: 27px;
+    }
+
+    .counter-info .counter-text {
+        font-size: 11px;
+    }
+
+    .we-do {
+        height: 270vw;
     }
 
     .slider-quote {
-        height: 120vw;
+        height: 60vw;
+    }
+
+    .slider-quote .media svg {
+        padding: 23px;
+        width: 118px;
+        height: 115px;
+    }
+
+    .people-say {
+        height: 260vw;
+    }
+
+    .blog {
+        height: 330vw;
+    }
+
+    .blog .blog-title .col-xs-4 {
+        max-width: 16%;
+    }
+
+    .logos {
+        height: 84vw;
+    }
+
+    .logos .container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        width: 25%;
+        padding-top: 20px;
+    }
+}
+
+@media screen and  (max-width: 375px) {
+    .story {
+        height: 330vw;
+    }
+
+    .services {
+        height: 330vw;
+    }
+
+    .unique-design .tablet {
+        height: 165px;
+    }
+
+    .services {
+        height: 280vw;
+    }
+
+    .people-say {
+        height: 360vw;
+    }
+
+    .slider-quote {
+        height: 100vw;
     }
 
     .slider-quote .media svg {
@@ -1841,12 +1906,44 @@ footer .created-by .author {
         width: 67%;
     }
 
-    .title-text span {
-        font-size: 18px !important;
+    .we-do {
+        height: 280vw;
     }
 
-    .title-text h2 {
-        font-size: 23px !important;
+    .blog {
+        height: 365vw;
+    }
+
+}
+
+@media screen and  (max-width: 350px) {
+
+    /***************************************************************/
+    .story {
+        height: 400vw;
+    }
+
+    .services {
+        height: 380vw;
+    }
+
+    .counter-info {
+        height: 90vw;
+    }
+
+    .unique-design {
+        height: 325px;
+        min-height: 325px;
+    }
+
+    .unique-design .tablet {
+        height: 145px;
+        width: 36%;
+    }
+
+    .unique-design .phone-img {
+        width: 21%;
+        bottom: -27px;
     }
 
     .we-do {
@@ -1858,7 +1955,16 @@ footer .created-by .author {
     }
 
     .people-say {
-        height: 530vw;
+        height: 490vw;
+    }
+
+    .people-say .media-body {
+
+        margin-left: 0px;
+    }
+
+    .people-say .people-text {
+        text-align: center;
     }
 
     .people-say .media {
@@ -1877,20 +1983,6 @@ footer .created-by .author {
         align-items: center;
     }
 
-    .logos {
-
-        height: 84vw;
-    }
-
-    .logos .container {
-        flex-wrap: wrap;
-    }
-
-    .logo {
-        width: 25%;
-        padding-top: 20px;
-    }
-
     .team .container {
         padding: 0;
     }
@@ -1904,23 +1996,25 @@ footer .created-by .author {
         padding-bottom: 0;
     }
 
+    .map {
+        height: 40vw;
+    }
+
     .blog {
         height: 410vw;
     }
 
     footer {
-        height: 420vw;
+        height: 460vw;
+    }
+}
+
+@media screen and  (max-width: 320px) {
+    .slider-quote-second #customId {
+        height: 120vw;
     }
 
-    footer .footer-logo {
-        width: 40%;
-    }
-    footer .notes h5 a{
-        text-decoration: none;
-        color: black;
-    }
-    footer .notes h5 a:hover{
-        text-decoration: none;
-        color: #fce38a;
+    footer {
+        height: 490vw;
     }
 }

@@ -504,6 +504,32 @@ ul {
     background: #f8f8f8;
 }
 
+.slick-slider {
+    width: 80%;
+}
+
+.slick-track {
+    width: 80% !important;
+}
+
+.slick-prev {
+    left: 15px !important;
+}
+
+.slick-next {
+    right: 15px !important;
+}
+
+.slick-current {
+    left: 0 !important;
+    top: 0 !important;
+    width: 700px!important;
+}
+
+.slick-prev::before, .slick-next::before {
+    color: black !important;
+}
+
 .slider-quote .carousel,
 .slider-quote .media,
 .slider-quote .carousel-inner,
@@ -1905,13 +1931,17 @@ footer .created-by .author {
         margin-right: 0;
         width: 67%;
     }
-/**/
+
     .we-do {
         height: 280vw;
     }
 
     .blog {
         height: 365vw;
+    }
+
+    footer {
+        height: 400vw;
     }
 
 }

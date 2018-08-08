@@ -839,6 +839,9 @@ footer {
   .footer-logo {
     width: 40%;
   }
+  .custom-file-label {
+    color: #b1b1b1;
+  }
   .notes {
     a {
       text-decoration: none;
@@ -1081,6 +1084,33 @@ footer {
   }
 }
 
+@media screen and (max-width: 1600px) {
+  .story {
+    height: 82vh;
+  }
+  .we-do {
+    height: 46vw;
+  }
+  .slider-quote {
+    height: 16vw;
+  }
+  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
+    height: 14vw;
+  }
+  .slider-quote-second #customId {
+    height: 14vw;
+  }
+  .slider-quote-second {
+    height: 19vw;
+  }
+  .people-say {
+    height: 45vw;
+  }
+  footer {
+    height: 45vw;
+  }
+}
+
 @media screen and (max-width: 1440px) {
   .people-say {
     height: 65vw;
@@ -1198,7 +1228,6 @@ footer {
     width: 10%;
   }
 
-
   .slider-quote .carousel,
   .slider-quote .media,
   .slider-quote .carousel-inner,
@@ -1245,7 +1274,6 @@ footer {
   .services svg {
     margin-right: 1rem;
   }
-
 
   .unique-design {
     .tablet {
@@ -1435,16 +1463,19 @@ footer {
 
 @media screen and (max-width: 600px) {
 
-  .intro .title-text span {
-    font-size: 35px !important;
-  }
-
-  .intro .learn-more {
-    margin-top: 0 !important;
-  }
-
-  .intro .title-text h1 {
-    font-size: 40px;
+  .intro {
+    .title-text span {
+      font-size: 35px !important;
+    }
+    .slider-items {
+      padding-top: 25px;
+    }
+    .learn-more {
+      margin-top: 0 !important;
+    }
+    .title-text h1 {
+      font-size: 40px;
+    }
   }
 
   .title-text span {
@@ -1544,7 +1575,7 @@ footer {
   }
 
   .menu ul.open {
-    transition: all .9s ease;
+    transition: all .4s ease;
   }
 
   .menu ul.open {
@@ -1756,11 +1787,17 @@ footer {
     width: 25%;
     padding-top: 20px;
   }
+  footer {
+    height: 326vw;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .story {
-    height: 330vw;
+    height: 310vw;
+    .text {
+      margin: 30px 0;
+    }
   }
 
   .services {
@@ -1795,10 +1832,6 @@ footer {
       height: 85vw;
     }
   }
-
-  .slider-quote
-  .slider-quote
-  .slider-quote
   #carouselExampleControls {
     height: 80vw;
   }
@@ -1830,7 +1863,11 @@ footer {
     margin-right: 0;
     width: 67%;
   }
-
+  .team {
+    .container {
+      overflow: hidden;
+    }
+  }
   .we-do {
     height: 280vw;
   }
@@ -1849,7 +1886,7 @@ footer {
 
   /***************************************************************/
   .story {
-    height: 400vw;
+    height: 336vw;
   }
 
   .services {
@@ -1880,9 +1917,8 @@ footer {
     }
   }
 
-  .we-do
   .people-say {
-    height: 490vw;
+    height: 425vw;
     .media-body {
       margin-left: 0px;
     }
@@ -1929,10 +1965,23 @@ footer {
 }
 
 @media screen and (max-width: 320px) {
+  .story {
+    height: 366vw;
+  }
   .slider-quote-second #customId {
     height: 120vw;
   }
-
+  .logos {
+    height: 64vw;
+  }
+  .our-work {
+    .text {
+      margin: 38px 0;
+    }
+  }
+  .people-say {
+    height: 473vw;
+  }
   footer {
     height: 490vw;
   }

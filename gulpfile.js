@@ -13,7 +13,7 @@ gulp.task('sass', function () {
 gulp.task('browser-sync', function () {
     browserSync({
         server: {
-            baseDir: ''
+            baseDir: './app'
         },
         notify: false
     })
@@ -22,4 +22,4 @@ gulp.task('watch', ['browser-sync', 'sass'], function () {
     gulp.watch(['app/js/*.js','app/index.html']).on('change', browserSync.reload);
     gulp.watch('app/style/*.scss', ['sass'])
 });
-gulp.task('default', ['sass','watch','browser-sync']);
+gulp.task('default', ['watch']);

@@ -489,6 +489,17 @@ ul {
 }
 
 /*start blockquote */
+.slick-prev:before, .slick-next:before {
+  color: black !important;
+}
+
+.slick-prev {
+  left: 25px !important;
+}
+
+.slick-next {
+  right: 25px !important;
+}
 
 .slider-quote {
   padding: 45px 0;
@@ -1116,6 +1127,9 @@ footer {
   }
   .slider-quote-second {
     height: 19vw;
+    img {
+      width: 40%;
+    }
   }
   .people-say {
     height: 45vw;
@@ -1234,10 +1248,10 @@ footer {
   .services .media svg {
     width: 10%;
   }
-
-  .slider-quote-second .carousel-inner,
-  .slider-quote-second #customId {
-    height: 22vw;
+  .slider-quote-second {
+    img {
+      width: 23%;
+    }
   }
 
   .we-do {
@@ -1390,22 +1404,34 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
+  .intro{
+    .slider-controller{
+      margin: 20px;
+    }
+  }
   .title-text span {
     font-size: 64px;
   }
 
   .story {
-    height: 85vw;
+    height: 100%;
+    padding: 40px 0;
   }
 
   .services {
-    height: 105vw;
+    height: 100%;
+    padding: 40px 0;
   }
   .slider-quote .slider-item svg {
     width: 303px;
     border: 2px solid #95e1d3 !important;
     padding: 25px;
     height: 115px;
+  }
+  .slider-quote-second {
+    img {
+      width: 100%;
+    }
   }
   .unique-design .tablet {
     height: 304px;
@@ -1424,11 +1450,12 @@ footer {
   }
 
   .people-say {
-    height: 150vw;
+    height: 100%;
+    padding: 40px 0;
   }
 
   .blog {
-    height: 244vw;
+    height: 260vw;
   }
 
   .blog img {
@@ -1445,10 +1472,25 @@ footer {
   }
 
   footer {
-    height: 185vw;
+    height: 100%;
+    padding: 40px 0;
   }
 }
-
+@media screen and (max-width: 700px) {
+  .blog{
+    height: 100%;
+    padding: 40px 0;
+  }
+  .slider-controller{
+    padding-bottom: 20px;
+  }
+  .counter-info .number {
+    font-size: 50px;
+  }
+  .slider-quote-second {
+    height: 100%;
+  }
+}
 @media screen and (max-width: 600px) {
 
   .intro {
@@ -1464,6 +1506,7 @@ footer {
     .title-text h1 {
       font-size: 40px;
     }
+
   }
 
   .title-text span {
@@ -1582,7 +1625,8 @@ footer {
   }
 
   .story {
-    height: 200vw;
+    height: 100%;
+    padding-top: 40px;
   }
 
   .counter-info .number {
@@ -1594,11 +1638,13 @@ footer {
   }
 
   .services {
-    height: 205vw;
+    height: 100%;
+    padding-top: 40px;
   }
 
   .we-do {
-    height: 200vw;
+    height: 100%;
+
   }
 
   .we-do .we-do--image {
@@ -1659,59 +1705,6 @@ footer {
     height: 65vw;
   }
 
-  .slider-quote .carousel-inner {
-    margin-left: 25px;
-  }
-
-  .slider-quote .carousel-inner {
-    width: 95%;
-  }
-
-  .slider-quote-second #customId {
-    height: 43vw;
-  }
-
-  .people-say {
-    height: 190vw;
-  }
-
-  .blog {
-    height: 280vw;
-  }
-
-  .blog img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .blog .blog-item {
-    height: auto;
-  }
-
-  footer {
-    height: 270vw;
-  }
-}
-
-@media screen and (max-width: 475px) {
-
-  .story {
-    height: 300vw;
-  }
-
-  .intro .slider-text {
-    font-size: 15px;
-  }
-
-  .unique-design {
-    height: 366px;
-    min-height: 200px;
-  }
-
-  .unique-design .tablet {
-    height: 193px;
-    width: 36%;
-  }
   .slider-quote {
     .slider-item {
       flex-direction: column;
@@ -1733,6 +1726,77 @@ footer {
         }
       }
     }
+  }
+  .slider-quote-second {
+    height: 100%;
+    padding: 40px 0;
+    .slider-item {
+      img {
+        width: 50%;
+      }
+    }
+  }
+  .slider-quote .carousel-inner {
+    margin-left: 25px;
+  }
+
+  .slider-quote .carousel-inner {
+    width: 95%;
+  }
+
+  .slider-quote-second #customId {
+    height: 43vw;
+  }
+
+  .people-say {
+    height: 100%;
+    padding: 40px 0;
+  }
+
+  .blog {
+    height: 100%;
+    padding-top: 40px;
+  }
+
+  .blog img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .blog .blog-item {
+    height: auto;
+  }
+
+  footer {
+    height: 100%;
+    padding: 40px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .unique-design .tablet {
+    height: 193px;
+  }
+}
+
+@media screen and (max-width: 475px) {
+
+  .story {
+    height: 300vw;
+  }
+
+  .intro .slider-text {
+    font-size: 15px;
+  }
+
+  .unique-design {
+    height: 366px;
+    min-height: 200px;
+  }
+
+  .unique-design .tablet {
+    height: 193px;
+    width: 36%;
   }
 
   .services {
@@ -1760,9 +1824,9 @@ footer {
     width: 118px;
     height: 115px;
   }
-  .slider-quote-second{
+  .slider-quote-second {
     height: 130vw;
-    img{
+    img {
       margin: 0;
     }
   }
@@ -1831,22 +1895,9 @@ footer {
       padding-right: 0px;
     }
   }
-  #carouselExampleControls {
-    height: 80vw;
-  }
 
   .slider-quote-second {
-    height: 147vw;
-    #customId {
-      height: 116vw;
-    }
-  }
-
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
+    height: 117vw;
   }
 
   .slider-quote .quote-img {
@@ -1948,7 +1999,9 @@ footer {
 
     }
   }
-
+  .slider-quote-second {
+    height: 145vw;
+  }
   .map {
     height: 40vw;
   }
@@ -1984,6 +2037,9 @@ footer {
     .text {
       margin-top: 20px;
     }
+  }
+  .slider-quote-second {
+    height: 145vw;
   }
   .people-say {
     height: 473vw;

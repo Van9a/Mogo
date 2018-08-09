@@ -2,17 +2,20 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
   margin: 0;
   padding: 0;
 }
+
 .main {
-  font-family:Arial,sans-serif;
-  width:500px;
-  display:block;
-  margin:0 auto;
+  font-family: Arial, sans-serif;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
   background: #95e1d3;
 }
+
 h3 {
   background: red;
   color: #3498db;
@@ -23,22 +26,26 @@ h3 {
   position: relative;
   text-align: center;
 }
-.action{
-  display:block;
-  margin:100px auto;
-  width:100%;
-  text-align:center;
+
+.action {
+  display: block;
+  margin: 100px auto;
+  width: 100%;
+  text-align: center;
 }
+
 .action a {
-  display:inline-block;
-  padding:5px 10px;
-  background:#f30;
-  color:#fff;
-  text-decoration:none;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #f30;
+  color: #fff;
+  text-decoration: none;
 }
-.action a:hover{
-  background:#000;
+
+.action a:hover {
+  background: #000;
 }
+
 .intro {
   color: #fff;
   height: 100vh;
@@ -531,7 +538,6 @@ ul {
 .slick-prev::before, .slick-next::before {
   color: black !important;
 }
-
 
 .slider-quote .media svg {
   border: 3px solid #95e1d3;
@@ -1391,7 +1397,6 @@ footer {
     height: 100vw;
   }
 
-
   .slider-quote-second {
     height: 40vw;
   }
@@ -1622,8 +1627,6 @@ footer {
     justify-content: space-around;
   }
 
-
-
   .slider-quote-second {
     height: 65vw;
   }
@@ -1701,7 +1704,6 @@ footer {
   .we-do {
     height: 270vw;
   }
-
 
   .slider-quote .media svg {
     padding: 23px;

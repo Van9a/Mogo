@@ -29,14 +29,14 @@
     });
 
     $(document).ready(function () {
-        $('.slider-custom').slick({
+        $('.slider-quote').slick({
             dots: false,
             infinite: true,
             speed: 500,
             fade: true,
             cssEase: 'linear',
             autoplay: true,
-            autoplaySpeed: 2000
+            autoplaySpeed: 10000
         });
     });
 }());

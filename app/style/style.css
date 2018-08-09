@@ -7,20 +7,10 @@ body {
   padding: 0; }
 
 .main {
-  font-family: Arial,sans-serif;
+  font-family: Arial, sans-serif;
   width: 500px;
   display: block;
-  margin: 0 auto;
-  background: #95e1d3; }
-
-h3 {
-  background: red;
-  color: #3498db;
-  font-size: 36px;
-  margin: 10px;
-  padding: 2%;
-  position: relative;
-  text-align: center; }
+  margin: 0 auto; }
 
 .action {
   display: block;
@@ -194,7 +184,7 @@ ul {
   transition: transform .3s ease, box-shadow .3s ease; }
 
 .story .container .photo-container .photo-item:hover {
-  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
+  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
   -webkit-transform: translateX(-7px);
   transform: translateX(-7px) translateY(-7px); }
 
@@ -433,6 +423,26 @@ ul {
   justify-content: space-between;
   align-items: center;
   background: #f8f8f8; }
+  .slider-quote .slider-item {
+    width: 65% !important;
+    display: flex !important;
+    justify-content: center;
+    margin-left: 15%; }
+    .slider-quote .slider-item svg {
+      width: 205px;
+      border: 2px solid #95e1d3 !important;
+      padding: 40px;
+      height: 147px; }
+    .slider-quote .slider-item .quote-text {
+      margin-left: 20px; }
+      .slider-quote .slider-item .quote-text .quote {
+        font-size: 18px;
+        font-family: "Roboto", sans-serif;
+        color: #999999;
+        font-style: italic;
+        line-height: 1.5;
+        text-align: left;
+        font-weight: 400; }
 
 .slider-quote .media svg {
   border: 3px solid #95e1d3;
@@ -456,7 +466,8 @@ ul {
   font-family: "Kaushan Script", sans-serif;
   color: #333333;
   line-height: 1.2;
-  text-align: left; }
+  text-align: left;
+  padding-top: 10px; }
 
 .slider-quote .blockquote-footer::before {
   color: #f38181; }
@@ -542,6 +553,8 @@ ul {
   height: 20vw; }
 
 .slider-quote-second img {
+  width: 100%;
+  height: 100%;
   margin-right: 40px; }
 
 .slider-quote-second #customId {
@@ -831,6 +844,8 @@ footer {
   opacity: 0; }
 
 @media screen and (max-width: 2560px) {
+  .slider-quote .slider-item svg {
+    width: 150px; }
   .services, .story {
     height: 70vh; }
   .counter-info {
@@ -865,6 +880,8 @@ footer {
 @media screen and (max-width: 1920px) {
   .counter-info {
     height: 23vh; }
+  .slider-quote .slider-item svg {
+    width: 166px; }
   .we-do {
     height: 65vh; }
   .blog {
@@ -921,6 +938,8 @@ footer {
     height: 45vw; } }
 
 @media screen and (max-width: 1280px) {
+  .slider-quote .slider-item svg {
+    width: 222px; }
   footer {
     height: 53vw; }
   .slider-quote-second .carousel-inner {
@@ -931,6 +950,11 @@ footer {
 @media screen and (max-width: 1024px) {
   .intro .title-text h1 {
     font-size: 100px; }
+  .slider-quote .slider-item svg {
+    width: 276px;
+    border: 2px solid #95e1d3 !important;
+    padding: 40px;
+    height: 145px; }
   .story {
     height: 65vw; }
   .counter-info {
@@ -985,6 +1009,11 @@ footer {
     height: 60vw; }
   .unique-design .tablet {
     height: 405px; }
+  .slider-quote .slider-item svg {
+    width: 276px;
+    border: 2px solid #95e1d3 !important;
+    padding: 40px;
+    height: 145px; }
   .counter-info .number {
     font-size: 65px; }
   .people-say {
@@ -996,12 +1025,13 @@ footer {
   .we-do {
     height: 85vw; }
   .blog {
-    height: 135vw;
+    height: 195vw;
     justify-content: space-around; }
   .blog .title-text {
     margin-top: auto; }
   .blog img {
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
   .blog .blog-items {
     flex-direction: column; }
   .blog .blog-item {
@@ -1011,9 +1041,6 @@ footer {
     display: flex;
     height: 100%;
     width: 100%; }
-  .blog img {
-    height: 100%;
-    width: 50%; }
   .blog .blog-item {
     min-width: 100% !important;
     margin-bottom: 50px;
@@ -1032,6 +1059,11 @@ footer {
     height: 85vw; }
   .services {
     height: 105vw; }
+  .slider-quote .slider-item svg {
+    width: 303px;
+    border: 2px solid #95e1d3 !important;
+    padding: 25px;
+    height: 115px; }
   .unique-design .tablet {
     height: 304px; }
   .unique-design .phone-img {
@@ -1043,10 +1075,10 @@ footer {
   .people-say {
     height: 150vw; }
   .blog {
-    height: 190vw; }
+    height: 244vw; }
   .blog img {
     height: 100%;
-    width: 50%; }
+    width: 100%; }
   .blog .blog-item {
     min-width: 100% !important;
     margin-bottom: 50px;
@@ -1180,6 +1212,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around; }
+  .slider-quote .slider-item svg {
+    width: 451px;
+    border: 2px solid #95e1d3 !important;
+    padding: 20px;
+    height: 106px; }
   .slider-quote-second {
     height: 65vw; }
   .slider-quote .carousel-inner {
@@ -1211,6 +1248,21 @@ footer {
   .unique-design .tablet {
     height: 193px;
     width: 36%; }
+  .slider-quote .slider-item {
+    flex-direction: column;
+    align-items: center; }
+    .slider-quote .slider-item svg {
+      width: 150px;
+      border: 2px solid #95e1d3 !important;
+      padding: 40px;
+      height: 147px; }
+    .slider-quote .slider-item .quote-text {
+      margin: 0; }
+      .slider-quote .slider-item .quote-text .quote {
+        padding-top: 20px;
+        text-align: center; }
+      .slider-quote .slider-item .quote-text p {
+        text-align: center; }
   .services {
     height: 260vw; }
   .services .media {
@@ -1225,8 +1277,12 @@ footer {
     padding: 23px;
     width: 118px;
     height: 115px; }
+  .slider-quote-second {
+    height: 130vw; }
+    .slider-quote-second img {
+      margin: 0; }
   .people-say {
-    height: 260vw; }
+    height: 285vw; }
   .blog {
     height: 330vw; }
   .blog .blog-title .col-xs-4 {

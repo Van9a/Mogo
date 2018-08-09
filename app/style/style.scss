@@ -429,7 +429,8 @@ ul {
 }
 
 .we-do {
-  height: 115vh;
+  height: 100%;
+  padding: 40px 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1354,7 +1355,8 @@ footer {
   }
 
   .we-do {
-    height: 85vw;
+    height: 100%;
+    padding: 0px 0 40px 0;
   }
 
   .blog {
@@ -1404,8 +1406,8 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .intro{
-    .slider-controller{
+  .intro {
+    .slider-controller {
       margin: 20px;
     }
   }
@@ -1441,10 +1443,6 @@ footer {
     bottom: -64px;
   }
 
-  .we-do {
-    height: 100vw;
-  }
-
   .slider-quote-second {
     height: 40vw;
   }
@@ -1470,18 +1468,23 @@ footer {
     display: flex;
     flex-direction: column;
   }
-
+  .our-work {
+    .text {
+      margin: 25px 0;
+    }
+  }
   footer {
     height: 100%;
     padding: 40px 0;
   }
 }
+
 @media screen and (max-width: 700px) {
-  .blog{
+  .blog {
     height: 100%;
     padding: 40px 0;
   }
-  .slider-controller{
+  .slider-controller {
     padding-bottom: 20px;
   }
   .counter-info .number {
@@ -1491,6 +1494,7 @@ footer {
     height: 100%;
   }
 }
+
 @media screen and (max-width: 600px) {
 
   .intro {
@@ -1525,10 +1529,13 @@ footer {
     margin: 0;
   }
 
-  .we-do .title-text {
-
-    padding-top: 60px;
-
+  .we-do {
+    .title-text {
+      padding-top: 40px;
+    }
+    .text {
+      margin: 25px 0;
+    }
   }
 
   /*********************************************************************/
@@ -1694,6 +1701,7 @@ footer {
     align-items: center;
     justify-content: space-around;
   }
+
   .slider-quote .slider-item svg {
     width: 451px;
     border: 2px solid #95e1d3 !important;
@@ -1727,6 +1735,7 @@ footer {
       }
     }
   }
+
   .slider-quote-second {
     height: 100%;
     padding: 40px 0;
@@ -1736,6 +1745,7 @@ footer {
       }
     }
   }
+
   .slider-quote .carousel-inner {
     margin-left: 25px;
   }
@@ -1766,11 +1776,15 @@ footer {
   .blog .blog-item {
     height: auto;
   }
-
+  .our-work {
+    height: 100%;
+    padding: 40px 0;
+  }
   footer {
     height: 100%;
     padding: 40px 0;
   }
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1813,10 +1827,6 @@ footer {
 
   .counter-info .counter-text {
     font-size: 11px;
-  }
-
-  .we-do {
-    height: 270vw;
   }
 
   .slider-quote .media svg {
@@ -1913,12 +1923,13 @@ footer {
     width: 67%;
   }
   .team {
+
     .container {
       overflow: hidden;
+      .text {
+        margin: 25px 0;
+      }
     }
-  }
-  .we-do {
-    height: 280vw;
   }
 
   .blog {
@@ -1960,7 +1971,7 @@ footer {
   }
 
   .we-do {
-    height: 340vw;
+
     .title-text {
       padding-top: 42px;
     }

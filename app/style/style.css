@@ -363,7 +363,8 @@ ul {
     height: 3px; }
 
 .we-do {
-  height: 115vh;
+  height: 100%;
+  padding: 40px 0;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1033,7 +1034,8 @@ footer {
   #carouselExampleControls {
     height: 15vw; }
   .we-do {
-    height: 85vw; }
+    height: 100%;
+    padding: 0px 0 40px 0; }
   .blog {
     height: 195vw;
     justify-content: space-around; }
@@ -1084,8 +1086,6 @@ footer {
     height: 304px; }
   .unique-design .phone-img {
     bottom: -64px; }
-  .we-do {
-    height: 100vw; }
   .slider-quote-second {
     height: 40vw; }
   .people-say {
@@ -1102,6 +1102,8 @@ footer {
     height: 500px;
     display: flex;
     flex-direction: column; }
+  .our-work .text {
+    margin: 25px 0; }
   footer {
     height: 100%;
     padding: 40px 0; } }
@@ -1135,7 +1137,9 @@ footer {
   .unique-design .title-text h2 {
     margin: 0; }
   .we-do .title-text {
-    padding-top: 60px; }
+    padding-top: 40px; }
+  .we-do .text {
+    margin: 25px 0; }
   /*********************************************************************/
   .icon {
     position: absolute;
@@ -1287,6 +1291,9 @@ footer {
     width: 100%; }
   .blog .blog-item {
     height: auto; }
+  .our-work {
+    height: 100%;
+    padding: 40px 0; }
   footer {
     height: 100%;
     padding: 40px 0; } }
@@ -1314,8 +1321,6 @@ footer {
     font-size: 27px; }
   .counter-info .counter-text {
     font-size: 11px; }
-  .we-do {
-    height: 270vw; }
   .slider-quote .media svg {
     padding: 23px;
     width: 118px;
@@ -1372,8 +1377,8 @@ footer {
     width: 67%; }
   .team .container {
     overflow: hidden; }
-  .we-do {
-    height: 280vw; }
+    .team .container .text {
+      margin: 25px 0; }
   .blog {
     height: 365vw; }
   footer {
@@ -1396,10 +1401,8 @@ footer {
     .unique-design .phone-img {
       width: 21%;
       bottom: -27px; }
-  .we-do {
-    height: 340vw; }
-    .we-do .title-text {
-      padding-top: 42px; }
+  .we-do .title-text {
+    padding-top: 42px; }
   .people-say {
     height: 425vw; }
     .people-say .media-body {

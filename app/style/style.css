@@ -159,7 +159,7 @@ ul {
   transition: transform .3s ease, box-shadow .3s ease; }
 
 .story .container .photo-container .photo-item:hover {
-  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
+  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
   -webkit-transform: translateX(-7px);
   transform: translateX(-7px) translateY(-7px); }
 

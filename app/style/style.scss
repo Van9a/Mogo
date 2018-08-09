@@ -1395,9 +1395,9 @@ footer {
     display: flex;
     flex-direction: column;
   }
-
-  footer {
-    height: 160vw;
+  footer{
+    height: 100%;
+    padding: 40px 0;
   }
 
   footer .last-notes, footer .blog-instagram {
@@ -1453,7 +1453,8 @@ footer {
   }
 
   .blog {
-    height: 260vw;
+    height: 100%;
+    padding: 40px 0;
   }
 
   .blog img {
@@ -1679,9 +1680,7 @@ footer {
   }
 
   .counter-info {
-
     height: 75vw;
-
   }
 
   .counter-info .container {
@@ -1754,9 +1753,7 @@ footer {
     width: 95%;
   }
 
-  .slider-quote-second #customId {
-    height: 43vw;
-  }
+
 
   .people-say {
     height: 100%;
@@ -1795,9 +1792,7 @@ footer {
 
 @media screen and (max-width: 475px) {
 
-  .story {
-    height: 300vw;
-  }
+
 
   .intro .slider-text {
     font-size: 15px;
@@ -1813,9 +1808,6 @@ footer {
     width: 36%;
   }
 
-  .services {
-    height: 260vw;
-  }
 
   .services .media {
     margin: 35px 0;
@@ -1840,13 +1832,9 @@ footer {
       margin: 0;
     }
   }
-  .people-say {
-    height: 285vw;
-  }
 
-  .blog {
-    height: 330vw;
-  }
+
+
 
   .blog .blog-title .col-xs-4 {
     max-width: 16%;
@@ -1864,34 +1852,26 @@ footer {
     width: 25%;
     padding-top: 20px;
   }
-  footer {
-    height: 326vw;
-  }
+
 }
 
 @media screen and (max-width: 375px) {
   .story {
-    height: 310vw;
+
     .text {
       margin: 30px 0;
     }
   }
 
-  .services {
-    height: 330vw;
-  }
+
 
   .unique-design .tablet {
     height: 165px;
   }
 
-  .services {
-    height: 280vw;
-  }
 
-  .people-say {
-    height: 360vw;
-  }
+
+
 
   .slider-quote {
     .media svg {
@@ -1932,26 +1912,15 @@ footer {
     }
   }
 
-  .blog {
-    height: 365vw;
-  }
 
-  footer {
-    height: 400vw;
-  }
+
 
 }
 
 @media screen and (max-width: 350px) {
 
   /***************************************************************/
-  .story {
-    height: 336vw;
-  }
 
-  .services {
-    height: 380vw;
-  }
 
   .counter-info {
     height: 90vw;
@@ -1978,7 +1947,7 @@ footer {
   }
 
   .people-say {
-    height: 425vw;
+
     .media-body {
       margin-left: 0px;
     }
@@ -2017,19 +1986,12 @@ footer {
     height: 40vw;
   }
 
-  .blog {
-    height: 410vw;
-  }
 
-  footer {
-    height: 460vw;
-  }
+
+
 }
 
 @media screen and (max-width: 320px) {
-  .story {
-    height: 366vw;
-  }
   .slider-quote-second #customId {
     height: 120vw;
   }
@@ -2041,9 +2003,7 @@ footer {
       margin: 38px 0;
     }
   }
-  .services {
-    height: 358vw;
-  }
+
   .we-do {
     .text {
       margin-top: 20px;
@@ -2052,10 +2012,5 @@ footer {
   .slider-quote-second {
     height: 145vw;
   }
-  .people-say {
-    height: 473vw;
-  }
-  footer {
-    height: 490vw;
-  }
+
 }

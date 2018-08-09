@@ -6,7 +6,6 @@ body {
 .intro {
   color: #fff;
   height: 100vh;
-  min-height: 600px;
   background: url("../images/Layer 15.png") no-repeat center;
   background-size: cover;
   position: relative;
@@ -1395,6 +1394,10 @@ footer {
     height: 64vw; }
   .our-work .text {
     margin: 38px 0; }
+  .services {
+    height: 358vw; }
+  .we-do .text {
+    margin-top: 20px; }
   .people-say {
     height: 473vw; }
   footer {

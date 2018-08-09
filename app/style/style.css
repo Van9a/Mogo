@@ -4,7 +4,40 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  background: #ccc; }
+
+.main {
+  font-family: Arial,sans-serif;
+  width: 500px;
+  display: block;
+  margin: 0 auto;
+  background: #95e1d3; }
+
+h3 {
+  background: red;
+  color: #3498db;
+  font-size: 36px;
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center; }
+
+.action {
+  display: block;
+  margin: 100px auto;
+  width: 100%;
+  text-align: center; }
+
+.action a {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #f30;
+  color: #fff;
+  text-decoration: none; }
+
+.action a:hover {
+  background: #000; }
 
 .intro {
   color: #fff;
@@ -162,7 +195,7 @@ ul {
   transition: transform .3s ease, box-shadow .3s ease; }
 
 .story .container .photo-container .photo-item:hover {
-  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
+  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
   -webkit-transform: translateX(-7px);
   transform: translateX(-7px) translateY(-7px); }
 
@@ -396,7 +429,6 @@ ul {
   padding: 45px 0;
   position: relative;
   display: flex;
-  height: 15vw;
   overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
@@ -422,13 +454,6 @@ ul {
 
 .slick-prev::before, .slick-next::before {
   color: black !important; }
-
-.slider-quote .carousel,
-.slider-quote .media,
-.slider-quote .carousel-inner,
-.slider-quote .carousel-item,
-.slider-quote .media-body {
-  height: 12vh; }
 
 .slider-quote .media svg {
   border: 3px solid #95e1d3;
@@ -844,8 +869,6 @@ footer {
     margin-left: 20px; }
   .we-do {
     height: 80vh; }
-  .slider-quote {
-    height: 16vh; }
   .work-photo img {
     width: 100%; }
   .slider-quote-second {
@@ -861,14 +884,6 @@ footer {
     height: 30vw; } }
 
 @media screen and (max-width: 1920px) {
-  .slider-quote {
-    height: 20vh; }
-  .slider-quote .carousel,
-  .slider-quote .media,
-  .slider-quote .carousel-inner,
-  .slider-quote .carousel-item,
-  .slider-quote .media-body {
-    height: 11vw; }
   .counter-info {
     height: 23vh; }
   .we-do {
@@ -885,10 +900,6 @@ footer {
     height: 82vh; }
   .we-do {
     height: 46vw; }
-  .slider-quote {
-    height: 16vw; }
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 14vw; }
   .slider-quote-second #customId {
     height: 14vw; }
   .slider-quote-second {
@@ -919,12 +930,6 @@ footer {
   #accordion {
     width: 50%;
     margin-left: 20px; }
-  .slider-quote {
-    height: 15vw; }
-    .slider-quote .carousel {
-      height: 10vw; }
-    .slider-quote .container {
-      height: 13vw; }
   .slider-quote-second {
     height: 20vw; }
     .slider-quote-second .carousel-inner {
@@ -941,10 +946,6 @@ footer {
     height: 53vw; }
   .slider-quote-second .carousel-inner {
     height: 17vw; }
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 12vw; }
-  .slider-quote {
-    height: 19vw; }
   .slider-quote-second {
     height: 23vw; } }
 
@@ -964,16 +965,6 @@ footer {
     height: 77vw; }
   .services .media svg {
     width: 10%; }
-  .slider-quote .carousel,
-  .slider-quote .media,
-  .slider-quote .carousel-inner,
-  .slider-quote .carousel-item,
-  .slider-quote .media-body {
-    height: 16vw; }
-  .slider-quote {
-    height: 30vw; }
-    .slider-quote .container {
-      height: 15vw; }
   .slider-quote-second .carousel-inner,
   .slider-quote-second #customId {
     height: 22vw; }
@@ -1021,8 +1012,6 @@ footer {
     height: 120vw; }
   .services {
     height: 90vw; }
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 24vw; }
   #carouselExampleControls {
     height: 15vw; }
   .we-do {
@@ -1070,10 +1059,6 @@ footer {
     bottom: -64px; }
   .we-do {
     height: 100vw; }
-  .slider-quote {
-    height: 30vw; }
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 30vw; }
   .slider-quote-second {
     height: 40vw; }
   .people-say {
@@ -1216,14 +1201,8 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: space-around; }
-  .slider-quote {
-    height: 45vw; }
   .slider-quote-second {
     height: 65vw; }
-  #carouselExampleControls {
-    height: 30vw; }
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 50vw; }
   .slider-quote .carousel-inner {
     margin-left: 25px; }
   .slider-quote .carousel-inner {
@@ -1263,8 +1242,6 @@ footer {
     font-size: 11px; }
   .we-do {
     height: 270vw; }
-  .slider-quote {
-    height: 60vw; }
   .slider-quote .media svg {
     padding: 23px;
     width: 118px;
@@ -1298,18 +1275,14 @@ footer {
     height: 280vw; }
   .people-say {
     height: 360vw; }
-  .slider-quote {
-    height: 100vw; }
-    .slider-quote .media svg {
-      padding: 25px;
-      width: 125px;
-      height: 120px;
-      margin-right: 0px; }
-    .slider-quote .carousel-inner {
-      margin-left: 0px;
-      padding-right: 0px; }
-    .slider-quote .container {
-      height: 85vw; }
+  .slider-quote .media svg {
+    padding: 25px;
+    width: 125px;
+    height: 120px;
+    margin-right: 0px; }
+  .slider-quote .carousel-inner {
+    margin-left: 0px;
+    padding-right: 0px; }
   #carouselExampleControls {
     height: 80vw; }
   .slider-quote-second {
@@ -1317,7 +1290,6 @@ footer {
     .slider-quote-second #customId {
       height: 116vw; }
   .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 119vw;
     display: flex;
     flex-direction: column;
     align-items: center;

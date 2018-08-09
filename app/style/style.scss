@@ -6,7 +6,39 @@ body {
   margin: 0;
   padding: 0;
 }
+.main {
+  font-family:Arial,sans-serif;
+  width:500px;
+  display:block;
+  margin:0 auto;
+  background: #95e1d3;
+}
+h3 {
+  background: red;
+  color: #3498db;
+  font-size: 36px;
 
+  margin: 10px;
+  padding: 2%;
+  position: relative;
+  text-align: center;
+}
+.action{
+  display:block;
+  margin:100px auto;
+  width:100%;
+  text-align:center;
+}
+.action a {
+  display:inline-block;
+  padding:5px 10px;
+  background:#f30;
+  color:#fff;
+  text-decoration:none;
+}
+.action a:hover{
+  background:#000;
+}
 .intro {
   color: #fff;
   height: 100vh;
@@ -467,7 +499,6 @@ ul {
   padding: 45px 0;
   position: relative;
   display: flex;
-  height: 15vw;
   overflow: hidden;
   flex-direction: column;
   justify-content: space-between;
@@ -501,13 +532,6 @@ ul {
   color: black !important;
 }
 
-.slider-quote .carousel,
-.slider-quote .media,
-.slider-quote .carousel-inner,
-.slider-quote .carousel-item,
-.slider-quote .media-body {
-  height: 12vh;
-}
 
 .slider-quote .media svg {
   border: 3px solid #95e1d3;
@@ -1020,10 +1044,6 @@ footer {
     height: 80vh;
   }
 
-  .slider-quote {
-    height: 16vh;
-  }
-
   .work-photo img {
     width: 100%;
   }
@@ -1052,17 +1072,6 @@ footer {
 }
 
 @media screen and (max-width: 1920px) {
-  .slider-quote {
-    height: 20vh;
-  }
-
-  .slider-quote .carousel,
-  .slider-quote .media,
-  .slider-quote .carousel-inner,
-  .slider-quote .carousel-item,
-  .slider-quote .media-body {
-    height: 11vw;
-  }
 
   .counter-info {
     height: 23vh;
@@ -1092,12 +1101,7 @@ footer {
   .we-do {
     height: 46vw;
   }
-  .slider-quote {
-    height: 16vw;
-  }
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 14vw;
-  }
+
   .slider-quote-second #customId {
     height: 14vw;
   }
@@ -1148,16 +1152,6 @@ footer {
     margin-left: 20px;
   }
 
-  .slider-quote {
-    height: 15vw;
-    .carousel {
-      height: 10vw;
-    }
-    .container {
-      height: 13vw;
-    }
-  }
-
   .slider-quote-second {
     height: 20vw;
     .carousel-inner {
@@ -1184,14 +1178,6 @@ footer {
 
   .slider-quote-second .carousel-inner {
     height: 17vw;
-  }
-
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 12vw;
-  }
-
-  .slider-quote {
-    height: 19vw;
   }
 
   .slider-quote-second {
@@ -1227,21 +1213,6 @@ footer {
 
   .services .media svg {
     width: 10%;
-  }
-
-  .slider-quote .carousel,
-  .slider-quote .media,
-  .slider-quote .carousel-inner,
-  .slider-quote .carousel-item,
-  .slider-quote .media-body {
-    height: 16vw;
-  }
-
-  .slider-quote {
-    height: 30vw;
-    .container {
-      height: 15vw;
-    }
   }
 
   .slider-quote-second .carousel-inner,
@@ -1337,10 +1308,6 @@ footer {
     height: 90vw;
   }
 
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 24vw;
-  }
-
   #carouselExampleControls {
     height: 15vw;
   }
@@ -1424,13 +1391,6 @@ footer {
     height: 100vw;
   }
 
-  .slider-quote {
-    height: 30vw;
-  }
-
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 30vw;
-  }
 
   .slider-quote-second {
     height: 40vw;
@@ -1662,20 +1622,10 @@ footer {
     justify-content: space-around;
   }
 
-  .slider-quote {
-    height: 45vw;
-  }
+
 
   .slider-quote-second {
     height: 65vw;
-  }
-
-  #carouselExampleControls {
-    height: 30vw;
-  }
-
-  .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 50vw;
   }
 
   .slider-quote .carousel-inner {
@@ -1683,12 +1633,10 @@ footer {
   }
 
   .slider-quote .carousel-inner {
-
     width: 95%;
   }
 
   .slider-quote-second #customId {
-
     height: 43vw;
   }
 
@@ -1754,9 +1702,6 @@ footer {
     height: 270vw;
   }
 
-  .slider-quote {
-    height: 60vw;
-  }
 
   .slider-quote .media svg {
     padding: 23px;
@@ -1818,7 +1763,6 @@ footer {
   }
 
   .slider-quote {
-    height: 100vw;
     .media svg {
       padding: 25px;
       width: 125px;
@@ -1828,9 +1772,6 @@ footer {
     .carousel-inner {
       margin-left: 0px;
       padding-right: 0px;
-    }
-    .container {
-      height: 85vw;
     }
   }
   #carouselExampleControls {
@@ -1845,7 +1786,6 @@ footer {
   }
 
   .slider-quote .carousel, .slider-quote .media, .slider-quote .carousel-inner, .slider-quote .carousel-item, .slider-quote .media-body {
-    height: 119vw;
     display: flex;
     flex-direction: column;
     align-items: center;

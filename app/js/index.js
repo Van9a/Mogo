@@ -29,7 +29,7 @@
     });
 
     $(document).ready(function () {
-        $('.fade').slick({
+        $('.slider-custom').slick({
             dots: false,
             infinite: true,
             speed: 500,

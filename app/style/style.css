@@ -4,8 +4,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
 body {
   margin: 0;
-  padding: 0;
-  background: #ccc; }
+  padding: 0; }
 
 .main {
   font-family: Arial,sans-serif;
@@ -195,7 +194,7 @@ ul {
   transition: transform .3s ease, box-shadow .3s ease; }
 
 .story .container .photo-container .photo-item:hover {
-  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
+  box-shadow: 1px 1px #95e1d3, 7px 7px #95e1d3;
   -webkit-transform: translateX(-7px);
   transform: translateX(-7px) translateY(-7px); }
 
@@ -434,26 +433,6 @@ ul {
   justify-content: space-between;
   align-items: center;
   background: #f8f8f8; }
-
-.slick-slider {
-  width: 80%; }
-
-.slick-track {
-  width: 80% !important; }
-
-.slick-prev {
-  left: 15px !important; }
-
-.slick-next {
-  right: 15px !important; }
-
-.slick-current {
-  left: 0 !important;
-  top: 0 !important;
-  width: 700px !important; }
-
-.slick-prev::before, .slick-next::before {
-  color: black !important; }
 
 .slider-quote .media svg {
   border: 3px solid #95e1d3;

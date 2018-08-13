@@ -3,6 +3,49 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
+$Montserrat: "Montserrat", sans-serif;
+$Roboto: "Roboto", sans-serif;
+@mixin title-text__span($font-size) {
+  display: inline-block;
+  font-size: $font-size;
+  font-family: "Kaushan Script", sans-serif;
+  line-height: 1.2;
+}
+
+@mixin title-text__h2 {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin title-text__after {
+  content: '';
+  width: 60px;
+  display: inline-block;
+  vertical-align: bottom;
+  align-items: center;
+  left: 0;
+  background-color: rgb(243, 129, 129);
+  height: 3px;
+}
+
+@mixin member-name {
+  padding: 30px 0 15px 0;
+  font-size: 14px;
+  font-family: $Montserrat;
+  color: rgb(51, 51, 51);
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+@mixin member-position {
+  font-size: 15px;
+  font-family: $Roboto;
+  color: rgb(153, 153, 153);
+  font-style: italic;
+  line-height: 1.6;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,18 +63,16 @@ body {
   margin: 100px auto;
   width: 100%;
   text-align: center;
-}
-
-.action a {
-  display: inline-block;
-  padding: 5px 10px;
-  background: #f30;
-  color: #fff;
-  text-decoration: none;
-}
-
-.action a:hover {
-  background: #000;
+  a {
+    display: inline-block;
+    padding: 5px 10px;
+    background: #f30;
+    color: #fff;
+    text-decoration: none;
+    &:hover {
+      background: #000;
+    }
+  }
 }
 
 .intro {
@@ -46,7 +87,6 @@ body {
 
   .menu {
     width: 70%;
-
     ul {
       margin: 0;
       display: flex;
@@ -57,14 +97,14 @@ body {
       color: #fff;
       border: 2px solid transparent;
       transition: border-bottom .5s ease;
+      &:hover {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #fce38a;
+        border-bottom: 2px solid #fce38a;
+        transform: scaleX(1);
+      }
     }
-  }
-  .menu a:hover {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fce38a;
-    border-bottom: 2px solid #fce38a;
-    transform: scaleX(1);
   }
 
   .menu-link {
@@ -139,19 +179,15 @@ ul {
 .title-text {
   position: relative;
   text-align: center;
-}
-
-.title-text span {
-  display: inline-block;
-  font-size: 72px;
-  font-family: "Kaushan Script", sans-serif;
-  line-height: 1.2;
+  span {
+    @include title-text__span(72px);
+  }
 }
 
 .title-text h1 {
   padding-top: 20px;
   font-size: 150px;
-  font-family: "Montserrat", sans-serif;
+  font-family: $Montserrat;
   text-align: center;
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -169,20 +205,19 @@ ul {
 
 .slider-items {
   width: 25%;
-}
-
-.slider-items::before {
-  content: '';
-  width: 100%;
-  height: 2px;
-  display: inline-block;
-  vertical-align: top;
-  background: #fff;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 2px;
+    display: inline-block;
+    vertical-align: top;
+    background: #fff;
+  }
 }
 
 .slider-text {
   font-size: 24px;
-  font-family: "Montserrat", sans-serif;
+  font-family: $Montserrat;
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   line-height: 1.2;
@@ -195,45 +230,38 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
+  .title-text {
+    span {
+      font-size: 24px;
+    }
 
-.story {
-  .title-text span {
-    font-size: 24px;
-  }
+    h2 {
+      font-size: 30px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
 
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
+    &::after {
+      @include title-text__after;
+    }
   }
-
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
-  }
-  .container .photo-container .photo-item {
-    width: 100%;
-    transition: transform .3s ease, box-shadow .3s ease;
-  }
-  .container .photo-container .photo-item:hover {
-    box-shadow: 1px 1px #95e1d3,
-    7px 7px #95e1d3;
-    -webkit-transform: translateX(-7px);
-    transform: translateX(-7px) translateY(-7px);
-  }
-  .photo-item {
-    height: 252px;
-    display: flex;
-    width: 100%;
-    align-items: stretch;
-    justify-content: stretch;
+  .container {
+    .photo-container {
+      .photo-item {
+        width: 100%;
+        transition: transform .3s ease, box-shadow .3s ease;
+        height: 252px;
+        display: flex;
+        align-items: stretch;
+        justify-content: stretch;
+        &:hover {
+          box-shadow: 1px 1px #95e1d3,
+          7px 7px #95e1d3;
+          -webkit-transform: translateX(-7px);
+          transform: translateX(-7px) translateY(-7px);
+        }
+      }
+    }
   }
   .photo-item a {
     position: relative;
@@ -247,27 +275,28 @@ ul {
     text-transform: uppercase;
     color: #fff;
     font-size: 18px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     font-weight: bold;
     opacity: 0;
 
-  }
-  .photo-item a:after {
-    position: absolute;
-    content: '';
-    background-image: -moz-linear-gradient(90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
-    background-image: -webkit-linear-gradient(90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
-    background-image: -ms-linear-gradient(90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    transition: opacity .3s ease;
-    z-index: -1;
-  }
-  .photo-item a:hover {
-    opacity: 1;
+    &:after {
+      position: absolute;
+      content: '';
+      background-image: -moz-linear-gradient(90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+      background-image: -webkit-linear-gradient(90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+      background-image: -ms-linear-gradient(90deg, rgb(252, 227, 138) 0%, rgb(243, 129, 129) 100%);
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      transition: opacity .3s ease;
+      z-index: -1;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
   .photo-item a:hover:after {
     opacity: .9;
@@ -278,7 +307,7 @@ ul {
   text-align: center;
   margin: 60px 0;
   font-size: 15px;
-  font-family: "Roboto", sans-serif;
+  font-family: $Roboto;
   color: rgb(153, 153, 153);
   line-height: 1.6;
 }
@@ -297,7 +326,7 @@ ul {
   }
   .number {
     font-size: 72px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     color: rgb(255, 255, 255);
     font-weight: bold;
     text-transform: uppercase;
@@ -306,7 +335,7 @@ ul {
   }
   .counter-text {
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     line-height: 1.2;
@@ -332,42 +361,25 @@ ul {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
-  }
-  .title-text span {
-    font-size: 24px;
-  }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+  .title-text {
+    span {
+      font-size: 24px;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
   .media {
     margin: 50px 0;
-  }
-  .media svg {
-    width: 15%;
-  }
-  .media .media-body h5 {
-    text-transform: uppercase;
+    svg {
+      width: 15%;
+    }
+    .media-body h5 {
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -407,24 +419,16 @@ ul {
   }
   .title-text {
     padding-top: 4vw;
-  }
-  .title-text span {
-    font-size: 24px;
-  }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+    span {
+      font-size: 24px;
+      text-transform: none;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
 }
 
@@ -438,24 +442,15 @@ ul {
   align-items: center;
   .title-text {
     padding-top: 80px;
-  }
-  .title-text span {
-    font-size: 24px;
-  }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+    span {
+      font-size: 24px;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
   .card-body {
     max-height: 180px;
@@ -522,52 +517,31 @@ ul {
       border: 2px solid #95e1d3 !important;
       padding: 40px;
       height: 147px;
+      margin-right: 30px;
     }
     .quote-text {
       margin-left: 20px;
       .quote {
         font-size: 18px;
-        font-family: "Roboto", sans-serif;
+        font-family: $Roboto;
         color: rgb(153, 153, 153);
         font-style: italic;
         line-height: 1.5;
         text-align: left;
         font-weight: 400;
       }
+      .blockquote-footer {
+        font-size: 24px;
+        font-family: "Kaushan Script", sans-serif;
+        color: rgb(51, 51, 51);
+        line-height: 1.2;
+        text-align: left;
+        padding-top: 10px;
+        &::before {
+          color: #f38181;
+        }
+      }
     }
-  }
-}
-
-.slider-quote .media svg {
-  border: 3px solid #95e1d3;
-  padding: 40px;
-  width: 150px;
-  height: 150px;
-  margin-right: 30px;
-}
-
-.slider-quote .carousel-control-next,
-.carousel-control-prev {
-  width: 4% !important;
-}
-
-.slider-quote {
-  .carousel-inner {
-    position: relative;
-    width: 90%;
-    margin: 0 69px;
-    overflow: hidden;
-  }
-  .blockquote-footer {
-    font-size: 24px;
-    font-family: "Kaushan Script", sans-serif;
-    color: rgb(51, 51, 51);
-    line-height: 1.2;
-    text-align: left;
-    padding-top: 10px;
-  }
-  .blockquote-footer::before {
-    color: #f38181;
   }
 }
 
@@ -580,42 +554,30 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  .title-text span {
-    font-size: 24px;
+  .title-text {
+    span {
+      font-size: 24px;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
-  }
+
   .team-member {
     text-align: center;
   }
+
   .member-name {
-    padding: 30px 0 15px 0;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    color: rgb(51, 51, 51);
-    text-transform: uppercase;
-    line-height: 1.2;
+    @include member-name;
   }
+
   .member-position {
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    color: rgb(153, 153, 153);
-    font-style: italic;
-    line-height: 1.6;
+    @include member-position;
   }
+
 }
 
 .logos {
@@ -637,23 +599,16 @@ ul {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  .title-text span {
-    font-size: 24px;
-  }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+  .title-text {
+    span {
+      font-size: 24px;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
   .work-photo {
     padding: 0;
@@ -665,21 +620,16 @@ ul {
 }
 
 .slider-quote-second {
+  @extend .slider-quote;
   height: 20vw;
-}
-
-.slider-quote-second img {
-  width: 100%;
-  height: 100%;
-  margin-right: 40px;
-}
-
-.slider-quote-second #customId {
-  height: 12vw;
-}
-
-.slider-quote-second .media-body {
-  padding-top: 40px;
+  img {
+    width: 100%;
+    height: 100%;
+    margin-right: 40px;
+  }
+  .media-body {
+    padding-top: 40px;
+  }
 }
 
 .people-say {
@@ -699,64 +649,48 @@ ul {
   .overlay--bw {
     background-color: #ffffff;
   }
-  .title-text span {
-    font-size: 24px;
-  }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+  .title-text {
+    span {
+      font-size: 24px;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
   .people-text {
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(153, 153, 153);
     line-height: 1.6;
     text-align: left;
     margin-top: 25px;
   }
   .member-name {
-    padding: 30px 0 15px 0;
-    font-size: 14px;
-    font-family: "Montserrat", sans-serif;
-    color: rgb(51, 51, 51);
-    text-transform: uppercase;
-    line-height: 1.2;
+    @include member-name;
   }
   .member-position {
-    font-size: 15px;
-    font-family: "Roboto", sans-serif;
-    color: rgb(153, 153, 153);
-    font-style: italic;
-    line-height: 1.6;
+    @include member-position;
   }
   .people-position {
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(51, 51, 51);
     font-style: italic;
     line-height: 1.6;
-  }
-  .people-position::after {
-    content: '';
-    width: 60px;
-    display: block;
-    margin-top: 20px;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+    &::after {
+      content: '';
+      width: 60px;
+      display: block;
+      margin-top: 20px;
+      vertical-align: bottom;
+      align-items: center;
+      left: 0;
+      background-color: rgb(243, 129, 129);
+      height: 3px;
+    }
   }
   .media {
     margin-top: 70px;
@@ -777,29 +711,21 @@ ul {
   overflow: hidden;
   .title-text {
     margin-bottom: 30px;
-  }
-  .title-text span {
-    font-size: 24px;
-  }
-  .title-text h2 {
-    font-size: 30px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
-  .title-text::after {
-    content: '';
-    width: 60px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: rgb(243, 129, 129);
-    height: 3px;
+
+    span {
+      font-size: 24px;
+    }
+    h2 {
+      @include title-text__h2;
+    }
+    &::after {
+      @include title-text__after;
+    }
   }
   .blog-item--title {
     margin-top: 20px;
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     line-height: 1.2;
@@ -809,7 +735,7 @@ ul {
   .blog-item--text {
     margin-top: 20px;
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(153, 153, 153);
     line-height: 1.6;
     text-align: left;
@@ -827,7 +753,7 @@ ul {
   .blog-item--statistics div {
     margin: 0 10px;
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(153, 153, 153);
     font-style: italic;
     line-height: 1.6;
@@ -848,7 +774,7 @@ ul {
   overflow: hidden;
   .title-text h2 {
     font-size: 24px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     color: rgb(243, 129, 129);
     font-weight: bold;
     text-transform: uppercase;
@@ -894,7 +820,7 @@ footer {
   }
   .footer-text {
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(153, 153, 153);
     line-height: 1.6;
     text-align: left;
@@ -904,7 +830,7 @@ footer {
 
   .footer-followers {
     font-size: 18px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     color: rgb(51, 51, 51);
     font-weight: bold;
     line-height: 1.2;
@@ -916,27 +842,27 @@ footer {
   .follow-us {
     align-items: center;
     font-size: 15px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(153, 153, 153);
     font-style: italic;
     line-height: 1.6;
     text-align: left;
     margin-top: 20px;
-  }
-  .follow-us i {
-    color: #95e1d3;
-    margin: 0 10px;
-  }
-  .follow-us::before {
-    content: '';
-    width: 100%;
-    margin-bottom: 20px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: #e5e5e5;
-    height: 3px;
+    i {
+      color: #95e1d3;
+      margin: 0 10px;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      margin-bottom: 20px;
+      display: inline-block;
+      vertical-align: bottom;
+      align-items: center;
+      left: 0;
+      background-color: #e5e5e5;
+      height: 3px;
+    }
   }
   button {
     background-color: rgb(149, 225, 211);
@@ -954,7 +880,7 @@ footer {
   }
   .blog-title {
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     color: rgb(51, 51, 51);
     text-transform: uppercase;
     line-height: 1.2;
@@ -966,7 +892,7 @@ footer {
   }
   .publication-date {
     font-size: 13px;
-    font-family: "Roboto", sans-serif;
+    font-family: $Roboto;
     color: rgb(153, 153, 153);
     font-style: italic;
     line-height: 1.846;
@@ -976,27 +902,27 @@ footer {
     width: 100%;
     padding: 1px;
   }
-  .created-by::before {
-    content: '';
-    width: 100%;
-    margin-bottom: 20px;
-    display: inline-block;
-    vertical-align: bottom;
-    align-items: center;
-    left: 0;
-    background-color: #e5e5e5;
-    height: 3px;
-  }
   .created-by {
     margin-top: 65px;
     justify-content: center;
     font-size: 14px;
-    font-family: "Montserrat", sans-serif;
+    font-family: $Montserrat;
     line-height: 1.2;
     font-weight: bold;
     text-align: center;
     .author {
       color: #f49f9f;
+    }
+    &::before {
+      content: '';
+      width: 100%;
+      margin-bottom: 20px;
+      display: inline-block;
+      vertical-align: bottom;
+      align-items: center;
+      left: 0;
+      background-color: #e5e5e5;
+      height: 3px;
     }
   }
 }
@@ -1045,22 +971,20 @@ footer {
     width: 15%;
   }
 
-  .we-do .we-do--image {
-    width: 48%;
-  }
-
-  .we-do--image img {
-    width: 100%;
+  .we-do {
+    height: 100%;
+    padding: 40px 0;
+    .we-do--image {
+      width: 48%;
+      img {
+        width: 100%;
+      }
+    }
   }
 
   #accordion {
     width: 50%;
     margin-left: 20px;
-  }
-
-  .we-do {
-    height: 100%;
-    padding: 40px 0;
   }
 
   .work-photo img {
@@ -1118,9 +1042,6 @@ footer {
     padding: 40px 0;
   }
 
-  .slider-quote-second #customId {
-    height: 14vw;
-  }
   .slider-quote-second {
     height: 19vw;
     img {
@@ -1193,18 +1114,16 @@ footer {
 @media screen and (max-width: 1280px) {
   .slider-quote .slider-item svg {
     width: 222px;
-
-  }
-  footer {
-    height: 53vw;
-  }
-
-  .slider-quote-second .carousel-inner {
-    height: 17vw;
   }
 
   .slider-quote-second {
     height: 23vw;
+    .carousel-inner {
+      height: 17vw;
+    }
+  }
+  footer {
+    height: 53vw;
   }
 }
 
@@ -1212,23 +1131,7 @@ footer {
   .intro .title-text h1 {
     font-size: 100px;
   }
-  .slider-quote .slider-item svg {
-
-    width: 276px;
-    border: 2px solid #95e1d3 !important;
-    padding: 40px;
-    height: 145px;
-
-  }
   .story {
-    height: 65vw;
-  }
-
-  .counter-info {
-    height: 27vw;
-  }
-
-  .services {
     height: 65vw;
   }
 
@@ -1239,11 +1142,11 @@ footer {
 
   .services {
     height: 77vw;
+    .media svg {
+      width: 10%;
+    }
   }
 
-  .services .media svg {
-    width: 10%;
-  }
   .slider-quote-second {
     img {
       width: 23%;
@@ -1251,6 +1154,7 @@ footer {
   }
 
   .we-do {
+    height: 75vw;
     .we-do--image img {
       width: 100%;
     }
@@ -1263,10 +1167,6 @@ footer {
 
   .map {
     height: 30vw;
-  }
-
-  footer {
-    height: 65vw;
   }
 
   .counter-info {
@@ -1287,29 +1187,34 @@ footer {
     }
   }
 
-  .we-do {
-    height: 75vw;
-  }
-
   .blog {
     height: 70vw;
   }
 
-  .slider-quote .carousel-inner {
-    padding-right: 30px;
-    font-size: 14px;
-  }
+  .slider-quote {
+    .carousel-inner {
+      padding-right: 30px;
+      font-size: 14px;
+    }
+    .slider-item svg {
+      width: 276px;
+      border: 2px solid #95e1d3 !important;
+      padding: 40px;
+      height: 145px;
 
-  .people-say .media {
-    width: 100% !important;
-
+    }
   }
 
   .people-say {
     height: 85vw;
     background-size: cover;
+    .media {
+      width: 100% !important;
+    }
   }
-
+  footer {
+    height: 65vw;
+  }
 }
 
 @media screen and (max-width: 980px) {
@@ -1320,13 +1225,11 @@ footer {
 
   .unique-design {
     height: 60vw;
-  }
-
-  .unique-design .tablet {
-    height: 405px;
+    .tablet {
+      height: 405px;
+    }
   }
   .slider-quote .slider-item svg {
-
     width: 276px;
     border: 2px solid #95e1d3 !important;
     padding: 40px;
@@ -1361,34 +1264,33 @@ footer {
 
   .blog .title-text {
     margin-top: auto;
-  }
+    img {
+      height: 100%;
+      width: 100%;
+    }
 
-  .blog img {
-    height: 100%;
-    width: 100%;
-  }
+    .blog-items {
+      flex-direction: column;
+    }
 
-  .blog .blog-items {
-    flex-direction: column;
-  }
+    .blog-item {
+      min-width: 100% !important;
+      margin-bottom: 50px;
+    }
 
-  .blog .blog-item {
-    min-width: 100% !important;
-    margin-bottom: 50px;
-  }
+    .blog-item--photo {
+      display: flex;
+      height: 100%;
+      width: 100%;
+    }
 
-  .blog .blog-item--photo {
-    display: flex;
-    height: 100%;
-    width: 100%;
-  }
-
-  .blog .blog-item {
-    min-width: 100% !important;
-    margin-bottom: 50px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
+    .blog-item {
+      min-width: 100% !important;
+      margin-bottom: 50px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
   }
   footer {
     height: 100%;
@@ -1426,20 +1328,18 @@ footer {
     height: 115px;
   }
   .slider-quote-second {
+    height: 40vw;
     img {
       width: 100%;
     }
   }
-  .unique-design .tablet {
-    height: 304px;
-  }
-
-  .unique-design .phone-img {
-    bottom: -64px;
-  }
-
-  .slider-quote-second {
-    height: 40vw;
+  .unique-design {
+    .tablet {
+      height: 304px;
+    }
+    .phone-img {
+      bottom: -64px;
+    }
   }
 
   .people-say {
@@ -1450,19 +1350,18 @@ footer {
   .blog {
     height: 100%;
     padding: 40px 0;
-  }
+    img {
+      height: 100%;
+      width: 100%;
+    }
 
-  .blog img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .blog .blog-item {
-    min-width: 100% !important;
-    margin-bottom: 50px;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
+    .blog-item {
+      min-width: 100% !important;
+      margin-bottom: 50px;
+      height: 500px;
+      display: flex;
+      flex-direction: column;
+    }
   }
   .our-work {
     .text {
@@ -1494,8 +1393,13 @@ footer {
 @media screen and (max-width: 600px) {
 
   .intro {
-    .title-text span {
-      font-size: 35px !important;
+    .title-text {
+      h1 {
+        font-size: 40px;
+      }
+      span {
+        font-size: 35px !important;
+      }
     }
     .slider-items {
       padding-top: 25px;
@@ -1503,34 +1407,40 @@ footer {
     .learn-more {
       margin-top: 0 !important;
     }
-    .title-text h1 {
-      font-size: 40px;
+
+  }
+
+  .title-text {
+    span {
+      font-size: 18px !important;
     }
-
+    h2 {
+      font-size: 23px !important;
+    }
   }
 
-  .title-text span {
-    font-size: 18px !important;
+  .unique-design {
+    .title-text {
+      padding-top: 12vw;
+    }
+    .title-text {
+      h2 {
+        margin: 0;
+      }
+    }
+    .tablet {
+      height: 242px;
+    }
   }
-
-  .title-text h2 {
-    font-size: 23px !important;
-  }
-
-  .unique-design .title-text {
-    padding-top: 12vw;
-  }
-
-  .unique-design .title-text h2 {
-    margin: 0;
-  }
-
   .we-do {
+    height: 100%;
     .text {
       margin: 25px 0;
     }
+    .we-do--image {
+      width: 100%;
+    }
   }
-
   /*********************************************************************/
   .icon {
     position: absolute;
@@ -1619,7 +1529,7 @@ footer {
     flex-direction: column;
     z-index: 1;
   }
-
+  /************************************************************************/
   .slider-controller {
     flex-direction: column;
   }
@@ -1627,28 +1537,16 @@ footer {
   .story {
     height: 100%;
     padding-top: 40px;
-  }
-
-  .counter-info .number {
-    font-size: 50px;
-  }
-
-  .counter-info {
-    height: 32vw;
+    .photo-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   .services {
     height: 100%;
     padding-top: 40px;
-  }
-
-  .we-do {
-    height: 100%;
-
-  }
-
-  .we-do .we-do--image {
-    width: 100%;
   }
 
   #accordion {
@@ -1657,47 +1555,27 @@ footer {
     margin-top: 20px;
   }
 
-  .story .photo-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .unique-design .tablet {
-    height: 308px;
-  }
-
-  .unique-design .tablet {
-    height: 242px;
-  }
-
   .counter-info {
     height: 75vw;
-  }
-
-  .counter-info .container {
-    display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-  }
-
-  .counter-info .counter-container {
-    height: 50%;
-    width: 33.3%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .slider-quote .slider-item svg {
-    width: 451px;
-    border: 2px solid #95e1d3 !important;
-    padding: 20px;
-    height: 106px;
+    .container {
+      display: flex;
+      height: 100%;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      .counter-container {
+        height: 50%;
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        .number {
+          font-size: 50px;
+        }
+      }
+    }
   }
 
   .slider-quote-second {
@@ -1737,14 +1615,6 @@ footer {
     }
   }
 
-  .slider-quote .carousel-inner {
-    margin-left: 25px;
-  }
-
-  .slider-quote .carousel-inner {
-    width: 95%;
-  }
-
   .people-say {
     height: 100%;
     padding: 40px 0;
@@ -1753,15 +1623,14 @@ footer {
   .blog {
     height: 100%;
     padding-top: 40px;
-  }
+    img {
+      height: 100%;
+      width: 100%;
+    }
 
-  .blog img {
-    height: 100%;
-    width: 100%;
-  }
-
-  .blog .blog-item {
-    height: auto;
+    .blog-item {
+      height: auto;
+    }
   }
   .our-work {
     height: 100%;
@@ -1789,23 +1658,23 @@ footer {
   .unique-design {
     height: 366px;
     min-height: 200px;
-  }
-
-  .unique-design .tablet {
-    height: 193px;
-    width: 36%;
+    .tablet {
+      height: 193px;
+      width: 36%;
+    }
   }
 
   .services .media {
     margin: 35px 0;
   }
 
-  .counter-info .number {
-    font-size: 27px;
-  }
-
-  .counter-info .counter-text {
-    font-size: 11px;
+  .counter-info {
+    .number {
+      font-size: 27px;
+    }
+    .counter-text {
+      font-size: 11px;
+    }
   }
 
   .slider-quote .media svg {
@@ -1826,10 +1695,9 @@ footer {
 
   .logos {
     height: 84vw;
-  }
-
-  .logos .container {
-    flex-wrap: wrap;
+    .container {
+      flex-wrap: wrap;
+    }
   }
 
   .logo {
@@ -1841,7 +1709,6 @@ footer {
 
 @media screen and (max-width: 375px) {
   .story {
-
     .text {
       margin: 30px 0;
     }
@@ -1866,22 +1733,17 @@ footer {
 
   .slider-quote-second {
     height: 117vw;
+    img {
+      margin-right: 0;
+      width: 67%;
+    }
   }
 
   .slider-quote .quote-img {
     margin-bottom: 20px;
   }
 
-  .carousel-item-next, .carousel-item-prev, .carousel-item.active {
-    display: flex;
-  }
-
-  .slider-quote-second img {
-    margin-right: 0;
-    width: 67%;
-  }
   .team {
-
     .container {
       overflow: hidden;
       .text {
@@ -1893,13 +1755,9 @@ footer {
 }
 
 @media screen and (max-width: 350px) {
-
-  /***************************************************************/
-
   .counter-info {
     height: 90vw;
   }
-
   .unique-design {
     height: 325px;
     min-height: 325px;
@@ -1912,19 +1770,13 @@ footer {
       bottom: -27px;
     }
   }
-
   .we-do {
-
     .title-text {
       padding-top: 42px;
     }
   }
 
   .people-say {
-
-    .media-body {
-      margin-left: 0px;
-    }
     .people-text {
       text-align: center;
     }
@@ -1937,6 +1789,7 @@ footer {
       width: 100%;
     }
     .media-body {
+      margin-left: 0px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1963,9 +1816,6 @@ footer {
 }
 
 @media screen and (max-width: 320px) {
-  .slider-quote-second #customId {
-    height: 120vw;
-  }
   .logos {
     height: 64vw;
   }
@@ -1983,5 +1833,4 @@ footer {
   .slider-quote-second {
     height: 145vw;
   }
-
 }

@@ -34,7 +34,26 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  /*.menu a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    height: 3px;
+    width: 100px;
+  }
+
+  .menu a:hover {
+    transition: all 0.3s ease;
+
+  }
+
+  .learn-more a:hover {
+    text-decoration: none;
+    color: #fce38a;
+    border-color: #fce38a;
+  }*/ }
   .intro .menu {
     width: 70%; }
     .intro .menu ul {
@@ -56,19 +75,18 @@ body {
     height: 50px;
     display: flex;
     align-items: center; }
-  .intro .menu a:hover::after {
+  .intro .menu a {
+    color: white; }
+  .intro .menu a:after {
+    display: block;
     content: "";
-    position: absolute;
-    left: 0;
-    bottom: 2px;
-    height: 3px;
-    width: 100px; }
-  .intro .menu a:hover {
-    transition: all 0.3s ease; }
-  .intro .learn-more a:hover {
-    text-decoration: none;
-    color: #fce38a;
-    border-color: #fce38a; }
+    height: 2px;
+    width: 0;
+    background-color: #ffeb3b;
+    transition: all .3s ease-in-out; }
+  .intro .menu a:hover:after,
+  .intro .menu a:focus:after {
+    width: 100%; }
   .intro .container .intro--button {
     position: relative;
     background: transparent;

@@ -113,7 +113,7 @@ body {
     align-items: center;
   }
 
-  .menu a:hover::after {
+  /*.menu a:hover::after {
     content: "";
     position: absolute;
     left: 0;
@@ -131,6 +131,21 @@ body {
     text-decoration: none;
     color: #fce38a;
     border-color: #fce38a;
+  }*/
+  .menu a {
+    color: white;
+  }
+  .menu a:after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 0;
+    background-color: #ffeb3b;
+    transition: all .3s ease-in-out;
+  }
+  .menu a:hover:after,
+  .menu a:focus:after {
+    width: 100%;
   }
   .container .intro--button {
     position: relative;

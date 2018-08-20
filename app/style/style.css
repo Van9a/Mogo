@@ -69,7 +69,6 @@ body {
         text-transform: uppercase;
         text-decoration: none;
         color: #fce38a;
-        border-bottom: 2px solid #fce38a;
         transform: scaleX(1); }
   .intro .menu-link {
     height: 50px;
@@ -84,8 +83,7 @@ body {
     width: 0;
     background-color: #ffeb3b;
     transition: all .3s ease-in-out; }
-  .intro .menu a:hover:after,
-  .intro .menu a:focus:after {
+  .intro .menu a:hover:after {
     width: 100%; }
   .intro .container .intro--button {
     position: relative;

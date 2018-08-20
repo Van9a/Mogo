@@ -101,7 +101,7 @@ body {
         text-transform: uppercase;
         text-decoration: none;
         color: #fce38a;
-        border-bottom: 2px solid #fce38a;
+      //  border-bottom: 2px solid #fce38a;
         transform: scaleX(1);
       }
     }
@@ -144,8 +144,9 @@ body {
     background-color: #ffeb3b;
     transition: all .3s ease-in-out;
   }
-  .menu a:hover:after,
-  .menu a:focus:after {
+  .menu a:hover:after
+    /*,.menu a:focus:after */
+  {
     width: 100%;
   }
   .container .intro--button {
